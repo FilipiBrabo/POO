@@ -12,8 +12,8 @@ public class Retangulo extends Poligono{
 		tipo = "retangulo";
 	}
 
-	//@Override
-	public double area(double[] lados){
+	@Override
+	public double area(){
 		return lados[0] * lados[2]; 
 	}
 }

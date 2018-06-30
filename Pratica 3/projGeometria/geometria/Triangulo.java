@@ -7,7 +7,7 @@ public class Triangulo extends Poligono{
 		if (lado1 <=0 || lado2 <= 0 || lado3 <=0 || 
 			lado1 + lado2 <= lado3 || lado2 + lado3 <= lado1 ||
 			lado3 + lado1 <= lado2){
-			throw new Exception("Não Forma um Triangulo");
+			throw new Exception("Nao Forma um Triangulo");
 		}
 
 		lados = new double[3];
@@ -17,8 +17,8 @@ public class Triangulo extends Poligono{
 		tipo = "triangulo";
 	}
 
-	//@Override
-	public double area (double[] lados){
+	@Override
+	public double area (){
 		return 90;
 	}
 }

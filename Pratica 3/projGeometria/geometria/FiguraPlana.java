@@ -15,8 +15,8 @@ public class FiguraPlana {
 	public double area(){
 		return 0.0;
 	} 
-
-	public String toString(String tipo){
-		return "Obj: "+tipo+", Area: "+area()+", Perimetro: "+perimetro();
+	
+	public String toString(){
+		return "Obj: "+tipo+ ", Area: " +area()+ ", Perimetro: " +perimetro();
 	}
 }
