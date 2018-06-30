@@ -1,6 +1,6 @@
 package autocorrecao;
 
-class VerdadeiroFalso extends Pergunta {
+public class VerdadeiroFalso extends Pergunta {
 
 	public VerdadeiroFalso(String enunciado) {
 		super(enunciado);

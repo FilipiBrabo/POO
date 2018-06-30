@@ -2,18 +2,19 @@ package autocorrecao;
 
 public class MultiplaEscolha extends Pergunta {
 
-	private Alternativa[] alternativas;
+	private Alternativa[] alternativas = null;
 
 	public MultiplaEscolha(String enunciado) {
-		this.alternativas = new Alternativa[2];
 		super(enunciado);
+		this.alternativas = new Alternativa[2];
 	}
 	
 	public MultiplaEscolha(String enunciado, int numAlternativas) {
+		super(enunciado);
 		this.alternativas = new Alternativa[numAlternativas];
 	}
 
-	public void adicionaAlternativa(String novaAlternativa) {
+	public void adicionaAlternativa(String novaAlternativa) throws Exception{
 		adicionaAlternativa(new Alternativa(novaAlternativa));
 	}
 	
@@ -22,16 +23,16 @@ public class MultiplaEscolha extends Pergunta {
 		
 		for (int i = 0; i < alternativas.length && !conseguiuAdicionar; i++)
 			if (alternativas[i] == null) {
-				alternativas[i] = novaAlternativa;
+				alternativas[i] = novaAlternativa;				
 				conseguiuAdicionar = true;
 			}
 			
-		if (conseguiuAdicionar)
+		if (!conseguiuAdicionar)
 			throw new Exception("Nao adicionou alternativa.");
 	}
 	
 	@Override
-	public void imprimirPerrgunta() {
+	public void imprimirPergunta() {
 		System.out.println("Enunciado: " + this.enunciado);
 		for (Alternativa elemento: this.alternativas)
 			System.out.println("- " + elemento.getTexto());

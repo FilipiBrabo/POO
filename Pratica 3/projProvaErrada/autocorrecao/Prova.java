@@ -1,3 +1,5 @@
+package autocorrecao;
+
 public class Prova {
 
 	Pergunta[] perguntasDaProva = new Pergunta[5];
@@ -16,7 +18,9 @@ public class Prova {
 	
 	public void imprimirProva() {
 		System.out.println("--- PROVA ---");
-		for (Pergunta elemento : perguntasDaProva)
-			elemento.imprimirPergunta();
+		for (Pergunta elemento : perguntasDaProva) {
+			if (elemento != null)
+				elemento.imprimirPergunta();
+		}
 	}
 }

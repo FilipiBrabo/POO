@@ -5,12 +5,12 @@ public class Alternativa {
 	private String textoAlternativa;
 	
 	// Construtor
-	public Alternativa(String texto) {
+	public Alternativa(String texto) throws Exception{
 		setTexto(texto);
 	}
 	
 	public void setTexto(String texto) throws Exception {
-		if (texto.length() < 3)
+		if (texto.length() < 1)
 			throw new Exception("O texto da alternativa tem q ser maior q 1.");
 		this.textoAlternativa = texto;
 	}

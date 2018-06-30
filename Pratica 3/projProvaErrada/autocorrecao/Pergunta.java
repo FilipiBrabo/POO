@@ -2,7 +2,7 @@ package autocorrecao;
 
 public class Pergunta {
 
-	private String enunciado;
+	protected String enunciado;
 	
 	public Pergunta(String enunciado) {
 		this.enunciado = enunciado;

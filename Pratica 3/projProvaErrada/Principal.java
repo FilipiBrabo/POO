@@ -22,7 +22,7 @@ public class Principal {
 			p3.adicionaAlternativa("700");
 			
 			Pergunta p4 = new VerdadeiroFalso("int[] v = new int[3] cria um vetor com 3 nulls");		
-		
+			
 			Prova prova = new Prova();
 			prova.adicionaPergunta(p1);
 			prova.adicionaPergunta(p3);
