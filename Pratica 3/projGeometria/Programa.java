@@ -12,6 +12,7 @@ public class Programa{
 			System.out.println(a1);
 			System.out.println(a3);
 			System.out.println(a2);
+		
 		}catch(Exception e){
 			System.out.println(e);
 		}
