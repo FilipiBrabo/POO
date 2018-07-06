@@ -48,16 +48,13 @@ public class PlanoDeAulas implements PlanoFacil, PlanoDificil {
 
 	private void arrumaVetor(int i) {
 		for (; i < listaDeAulas.length; i++){
-			for (int j = i; j < listaDeAulas.length; j++){
-				if (j == listaDeAulas.length -1) {
-					listaDeAulas[j] = null;
-				}else {
-					listaDeAulas[j] = listaDeAulas[j++];
-				}
+			if (i == listaDeAulas.length - 1) {
+				listaDeAulas[i] = null;
+			}else {
+				listaDeAulas[i] = listaDeAulas[i + 1];
 			}
 		}
 	}
-
 
 	@Override
 	public void adicionarProvaSurpresa() throws Exception {
