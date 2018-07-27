@@ -2,10 +2,10 @@ public class Penalty {
 	
 	private static int contagem = 0;
 	
-	private GoleiroPessoa goleiro;
-	private CobradorPessoa cobrador;
+	private IGoleiroStrategy goleiro;
+	private ICobradorStrategy cobrador;
 
-	public Penalty(GoleiroPessoa goleiro, CobradorPessoa cobrador) {
+	public Penalty(IGoleiroStrategy goleiro, ICobradorStrategy cobrador) {
 		this.goleiro = goleiro;
 		this.cobrador = cobrador;
 	}

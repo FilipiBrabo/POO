@@ -2,9 +2,9 @@ public class Treino {
 
 	public static void main(String[] args) {
 
-		Jogador[] jogadores = inicializaJogadores(args[0], args[1]);
-		Jogador cobrador = jogadores[0];
-		Jogador goleiro = jogadores[1];
+		
+		ICobradorStrategy cobrador = args[0] == "P" ? new CobradorPessoa("Saul") : new CobradorComputador();
+		IGoleiroStrategy goleiro = args[1] == "P" ? new GoleiroPessoa("Paulo") : new GoleiroComputador();
 		
 		Penalty p = new Penalty(goleiro, cobrador);
 		
@@ -19,19 +19,5 @@ public class Treino {
 			
 		System.out.println("[" + ((Jogador) cobrador).getNome() + "] Gols = " + acertosCobrador 
 						+ "  [" + ((Jogador) goleiro).getNome() + "] Defesas = " + defesas);
-	}
-
-	private static Jogador[] inicializaJogadores(String tipoCobrador, String tipoGoleiro) {
-		if (tipoCobrador.equals("P")) {
-			Jogador[0] = new CobradorPessoa("Saul");
-		} else {
-			Jogador[0] = new CobradorComputador();
-		}
-
-		if (tipoGoleiro.equals("P")) {
-			Jogador[1] = new GoleiroPessoa("Paulo");
-		} else {
-			Jogador[1] = new GoleiroComputador();
-		}
 	}
 }
