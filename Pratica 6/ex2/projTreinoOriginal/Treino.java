@@ -3,8 +3,8 @@ public class Treino {
 	public static void main(String[] args) {
 
 		
-		ICobradorStrategy cobrador = args[0] == "P" ? new CobradorPessoa("Saul") : new CobradorComputador();
-		IGoleiroStrategy goleiro = args[1] == "P" ? new GoleiroPessoa("Paulo") : new GoleiroComputador();
+		ICobradorStrategy cobrador = args[0].equals("P") ? new CobradorPessoa("Saul") : new CobradorComputador();
+		IGoleiroStrategy goleiro = args[1].equals("P") ? new GoleiroPessoa("Paulo") : new GoleiroComputador();
 		
 		Penalty p = new Penalty(goleiro, cobrador);
 		
